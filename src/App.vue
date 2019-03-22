@@ -1,28 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="jumbotron">
+      <h1 class="display4">Vue Router</h1>
+      <p class="lead">Adicionando rotas a Single Page Application no Vue</p>
+    </div>
+
+    <div class="container">
+      <router-link to="/" class="btn btn-info mb-4 mr-4" exact>Home</router-link>
+      <router-link
+        :to="{ path: '/contatos' }"
+        class="btn btn-info mb-4 mr-4"
+      >Contatos</router-link>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+export default {};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
